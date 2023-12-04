@@ -13,7 +13,7 @@ HEADERS_LLAMA2 = {
     "Content-Type": "application/json",
 }
 
-API_URL_SDXL = "https://api-inference.huggingface.co/models/stabilityai/stable-diffusion-2-1"
+API_URL_SDXL = "https://api-inference.huggingface.co/models/stabilityai/stable-diffusion-xl-base-1.0"
 HEADERS_SDXL = {"Authorization": "Bearer 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"}
 
 def query_llama2(payload):
