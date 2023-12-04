@@ -6,49 +6,10 @@ headers = {"Authorization": f"Bearer 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",
         "Content-Type": "application/json",}
 
 lyrics = '''
-Never been in love
-But you're dragging my soul away
-Feels like woo woo woo woo
 
-Ever since the day
-You walked into my life I knew
-Complete surrender
-
-Where we go
-Where we go
-Where you go I follow baby
-Where we go
-Far away from earth
-Where no one can find us
-
-Butterfly
-Take me away
-Get carried away yeah
-Take it off baby
-
-Butterfly
-Let's get away
-Get carried away yeah
-Take it off baby
-
-Butterfly
-Take me away
-Get carried away yeah
-Take it off baby
-
-Butterfly
-Let's get away
-Get carried away yeah
-Losing myself
-
-Where we go
-Where we go
-Where you go I follow baby
-Where we go
-Far away from earth
-Where no one can find us
 '''
 
+# "inputs" must have less than 1024 tokens
 def queryLlama2(payload):
     json_body = {
         "inputs": f"[INST] <<SYS>> Generate an image description using these lyrics as inspiration <<SYS>> {payload} [/INST] ",
@@ -62,6 +23,7 @@ def queryLlama2(payload):
         return response
 
 data = queryLlama2(lyrics)
+
 res = data[0]['generated_text']
 # print(res)
 
