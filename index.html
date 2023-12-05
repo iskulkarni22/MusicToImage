@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Lyrics to Image Generator</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <script>
         function showLoading() {
             document.getElementById("generatedText").innerHTML = "Loading...";
@@ -14,8 +15,8 @@
 <body>
     <h1>Lyrics to Image Generator</h1>
     <form method="post" onsubmit="showLoading()">
-        <label for="lyrics">Paste the lyrics: (2500 characters or less)</label><br>
-        <textarea name="lyrics" rows="10" cols="30" maxlength="2500">{{ lyrics }}</textarea><br><br>
+        <label for="lyrics">Paste the lyrics: (2100 characters or less)</label><br>
+        <textarea name="lyrics" rows="10" cols="30" maxlength="2100">{{ lyrics }}</textarea><br><br>
         <input type="submit" value="Generate Image Description">
     </form>
     {% if generated_text %}
